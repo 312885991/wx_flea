@@ -1,0 +1,27 @@
+<!--pages/goods/comment/comment.wxml-->
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">匿名</view>
+    <view class="weui-cell__ft">
+      <switch checked bindchange="bindchange"/>
+    </view>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入您的评论" maxlength="120" bindinput="comment" style="height: 6em;position:relative;">
+        <view class="weui-textarea-counter" style="position:absolute;bottom:-295rpx;right:15rpx;">{{length}}/120</view>
+        <block wx:if="{{file!=null}}">
+          <view class="weui-uploader__file" bindtap="previewImage" id="{{3}}" style="margin-top:300rpx;">
+            <image class="weui-uploader__img" src="{{file}}" mode="aspectFill" />
+          </view>
+        </block>
+        <view class="weui-uploader__input-box" style="margin-top:300rpx;">
+          <view class="weui-uploader__input" bindtap="chooseImage" style=""></view>
+        </view>
+      </textarea>
+    </view>
+  </view>
+</view>
+<button class="submit" bindtap="submit" style="margin-top:25rpx;">发表</button>

@@ -1,0 +1,26 @@
+/* pages/goods/goods.wxss */
+.search{
+  position: fixed;
+  left:0;
+  top:0;
+  right:0;
+  z-index:999;
+  height: 10vh;
+}
+
+.goods{
+  display: flex;
+  height: 89.5vh;
+  margin-top: 10.5vh;
+}
+
+.left{
+  flex: 1;
+  position: relative;
+  height: 100%;
+  bottom: 0rpx;
+}
+.right{
+  height: 100%;
+  flex: 100;
+}

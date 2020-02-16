@@ -1,0 +1,11 @@
+<!--pages/mine/praise/praise.wxml-->
+<view class="praise">
+  <image src="{{imageUrl}}" bindtap='previewImage' mode="aspectFit"/>
+</view>
+<view class="note">
+  <view class="operation">点击图片后长按识别赞赏码</view>
+  <view class="operation">给作者一点鼓励吧</view>
+  <view class="record">
+    <text bindtap="getRecord">赞赏记录</text>
+  </view>
+</view>

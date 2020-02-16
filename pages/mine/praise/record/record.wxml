@@ -1,0 +1,18 @@
+<!--pages/mine/praise/record/record.wxml-->
+<!-- <block wx:if="{{records == null}}">
+  <van-divider contentPosition="center" fontSize="15">正在加载</van-divider>
+</block> -->
+<!-- <view class="container">
+  <view wx:for="{{records}}" wx:key="key">
+    <view class="record">
+      <van-panel title="{{item.nickName}}" desc="{{item.date}}"   />
+      <view class="money">￥{{item.money}}</view>
+    </view>
+  </view>
+</view> -->
+<block wx:for="{{records}}" wx:key="key">
+  <van-cell  center title="{{item.nickName}}" value="￥{{item.money}}" label="{{item.date}}" />
+</block>
+<block wx:if="{{records.length == 0}}">
+  <van-divider contentPosition="center" fontSize="15">真可怜，还没有人赞赏过作者呢 ~</van-divider>
+</block>

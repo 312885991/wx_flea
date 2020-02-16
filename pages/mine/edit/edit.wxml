@@ -1,0 +1,106 @@
+<block wx:if="{{userDetailInfo == null}}">
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">姓名</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的姓名"  bindinput="name"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">手机号</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的手机号"  bindinput="phone"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">学校</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的学校" bindinput="school"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">微信</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的微信"  bindinput="wechat"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">QQ</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的QQ"  bindinput="qq"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">地址</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的地址"  bindinput="address"/>
+    </view>
+  </view>
+</view>
+  <button class="submit" bindtap="add">提交</button>
+</block>
+<block wx:else>
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">姓名</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的姓名" value="{{userDetailInfo.name==null?'':userDetailInfo.name}}" bindinput="name"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">手机号</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的手机号" value="{{userDetailInfo.phone==null?'':userDetailInfo.phone}}" bindinput="phone"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">学校</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的学校" value="{{userDetailInfo.school==null?'':userDetailInfo.school}}" bindinput="school"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">微信</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的微信" value="{{userDetailInfo.wechat == null?'':userDetailInfo.wechat}}" bindinput="wechat"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">QQ</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的QQ" value="{{userDetailInfo.qq == null?'':userDetailInfo.qq}}" bindinput="qq"/>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">地址</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入您的地址"  bindinput="address"  value="{{userDetailInfo.address == null?'':userDetailInfo.address}}"/>
+    </view>
+  </view>
+</view>
+  <button class="submit" bindtap="update">修改保存</button>
+</block>

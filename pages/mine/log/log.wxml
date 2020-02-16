@@ -1,0 +1,132 @@
+<!--pages/mine/log/log.wxml-->
+<view class="cu-timeline">
+<view class="cu-item text-green">
+    <view class="bg-green content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.1.0</view>
+        <view class="cu-tag line-white">2020-02-16</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化数据库结构，减少数据冗余</view>
+        <view>2.调整相应的接口</view>
+        <view>3.新增公告内容</view>
+        <view>4.增加商品查询的上拉加载</view>
+      </view>
+    </view>   
+  </view>
+<view class="cu-item text-green">
+    <view class="bg-green content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v2.0.0</view>
+        <view class="cu-tag line-white">2019-10-10</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化商品下拉显示问题</view>
+        <view>2.优化界面显示及跳转</view>
+        <view>3.新增收藏功能</view>
+        <view>4.优化交互</view>
+        <view>5.增加数据校验</view>
+        <view>6.优化联系卖家</view>
+        <view>7.下拉刷新商品</view>
+      </view>
+    </view>   
+  </view>
+<view class="cu-item text-green">
+    <view class="bg-green content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.8</view>
+        <view class="cu-tag line-white">2019-10-08</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化界面</view>
+        <view>2.小程序正式上线</view>
+      </view>
+    </view>   
+  </view>
+<view class="cu-item text-green">
+    <view class="bg-green content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.6</view>
+        <view class="cu-tag line-white">2019-10-02</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化后台接口</view>
+        <view>2.优化数据请求流程</view>
+        <view>2.使用对象存储优化图片加载</view>
+      </view>
+    </view>   
+  </view>
+<view class="cu-item text-green">
+    <view class="bg-cyan content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.5</view>
+        <view class="cu-tag line-white">2019-09-28</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化URL</view>
+        <view>2.开发完所需全部后端接口</view>
+      </view>
+    </view>   
+  </view>
+<view class="cu-item text-green">
+    <view class="bg-cyan content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.4</view>
+        <view class="cu-tag line-white">2019-09-26</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化商品展示页</view>
+        <view>2.设计商品发布页</view>
+        <view>3.设计发表评论页</view>
+        <view>4.设计商品详情页</view>
+        <view>5.优化联系客服页</view>
+        <view>6.用户授权功能</view>
+        <view>7.获取openID唯一标识</view>
+        <view>8.实现分享功能</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-cyan content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.3</view>
+        <view class="cu-tag line-white">2019-09-25</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.优化商品展示页</view>
+        <view>2.设计个人信息页</view>
+        <view>3.设计赞赏码页</view>
+        <view>4.设计完善信息页</view>
+        <view>5.设计联系客服页</view>
+        <view>4.设计日志页</view>
+      </view>
+    </view>   
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-cyan content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.2</view>
+        <view class="cu-tag line-white">2019-09-24</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.设计主页、轮播图、公告</view>
+        <view>2.设计商品展示页</view>
+        <view>3.设计我的页面</view>
+        <view>4.设计信息头像显示</view>
+      </view>
+    </view>
+  </view>
+  <view class="cu-item text-green">
+    <view class="bg-cyan content shadow" style="background-color:#00B26A">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.1</view>
+        <view class="cu-tag line-white">2019-09-23</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.构思小程序整体画面</view>
+        <view>2.构思后端接口</view>
+        <view>3.优化数据库</view>
+      </view>
+    </view>
+  </view>
+</view>

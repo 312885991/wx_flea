@@ -1,0 +1,34 @@
+<!--pages/mine/like/like.wxml-->
+<block wx:if="{{goodList.length != 0}}">
+<van-divider />
+</block>
+<view wx:for="{{goodList}}" wx:key="key">
+<view bindtap="info" id="{{item.id}}">
+        <van-card
+          centered="true"
+          tag="{{item.tag}}"
+          origin-price="{{item.oldPrice}}"
+          price="{{item.currentPrice}}"
+          title="{{item.name}}"
+          thumb="{{item.imageUrl}}"
+          lazy-load="true"
+        >
+        <view slot="bottom">
+        <view slot="tags">
+          <van-tag type="success" size="medium" style="padding-right:10rpx;">{{item.sortC}}</van-tag>
+          <van-tag type="warning" size="medium">{{item.school}}</van-tag>
+        </view>
+        </view>
+        </van-card>
+        <block wx:if="{{index+1 != goodInfo.length}}">
+          <van-divider />
+        </block>
+      </view>
+</view>
+<!-- <van-divider contentPosition="center">暂无更多数据</van-divider> -->
+<block wx:if="{{goodList.length == 0}}">
+<van-divider contentPosition="center" fontSize="15">您暂时还没有收藏任何商品哦</van-divider>
+</block>
+<block wx:else>
+<van-divider contentPosition="center" fontSize="15">暂无更多数据</van-divider>
+</block>
