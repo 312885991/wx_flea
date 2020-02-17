@@ -314,6 +314,9 @@ Page({
    */
   onPullDownRefresh: function () {
     var that = this
+    wx.showLoading({
+      title: '正在刷新',
+    })
     wx.request({
       url: app.globalData.host + '/category/list',
       method: 'GET',
@@ -362,7 +365,8 @@ Page({
       success(res) {
         // console.log(res)
         setTimeout(function () {
-          wx.hideLoading()
+          wx.stopPullDownRefresh()
+          wx.hideLoading();
           that.setData({
             goods: res.data.data.list,
             page: res.data.data.pagination.current,
