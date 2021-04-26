@@ -1,0 +1,30 @@
+/* pages/main/announce/announce.wxss */
+.title text{
+  display: block;
+  text-align: center;
+  padding: 20rpx 0 10rpx 0;
+  font-size: 18px;
+}
+
+.date text{
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  color: darkgray;
+  padding-bottom: 20rpx;
+}
+
+.content text{
+  display: block;
+  text-indent: 2em;
+  padding: 0 20rpx;
+  margin-bottom: 40rpx;
+  font-size: 15px;
+}
+
+.footer text{
+  display: block;
+  text-align: right;
+  padding: 10rpx 50rpx;
+  font-size: 15px;
+}

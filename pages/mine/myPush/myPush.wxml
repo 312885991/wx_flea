@@ -1,0 +1,118 @@
+<!--pages/mine/myPush/myPush.wxml-->
+<van-tabs sticky bind:change="change" active="{{ active }}">
+  <van-tab title="上架商品">
+    <block wx:if="{{pushGoods.length != 0}}">
+      <van-divider />
+    </block>
+    <view wx:for="{{pushGoods}}" wx:key="key">
+      <view style="position:relative;">
+        <van-card centered="true" origin-price="{{item.oldPrice}}" price="{{item.currentPrice}}" title="{{item.name}}" thumb="{{item.imageUrl}}" lazy-load="true">
+          <view slot="tags">
+            <van-tag type="primary">{{item.sortName}}</van-tag>
+          </view>
+          <view slot="bottom">
+            <block wx:if="{{item.trade == 1}}"
+              ><!-- 已交易 -->
+              <button class="cu-btn bg-green" style="margin-right:15rpx" bindtap="info" id="{{item.id}}">商品详情</button>
+              <view class="weui-cell__hd" style="position: absolute;right: 10px;bottom:18rpx;">
+                <image src="/icon/trade.png" style="width: 70px; height: 70px; display: block;border-radius:50%;" />
+              </view>
+            </block>
+            <block wx:else>
+              <!-- 未交易 -->
+              <button class="cu-btn bg-red" style="margin-right:15rpx" bindtap="under" id="{{item.id}}">下架</button>
+              <button class="cu-btn bg-green" style="margin-right:15rpx" bindtap="confirm" id="{{item.id}}">确认交易</button>
+              <button class="cu-btn bg-green" style="margin-right:15rpx" bindtap="info" id="{{item.id}}">详情</button>
+            </block>
+          </view>
+        </van-card>
+        <van-divider />
+      </view>
+    </view>
+    <block wx:if="{{pushGoods.length == 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </block>
+  </van-tab>
+
+  <van-tab title="待审核">
+    <block wx:if="{{examineGoods.length != 0}}">
+      <van-divider />
+    </block>
+    <view wx:for="{{examineGoods}}" wx:key="key">
+      <view style="position:relative;">
+        <van-card centered="true" origin-price="{{item.oldPrice}}" price="{{item.currentPrice}}" title="{{item.name}}" thumb="{{item.imageUrl}}" lazy-load="true">
+          <view slot="tags">
+            <van-tag type="primary">{{item.sortName}}</van-tag>
+          </view>
+          <view slot="bottom">
+            <button class="cu-btn bg-red" style="margin-right:15rpx" bindtap="cancel" id="{{item.id}}">取消发布</button>
+            <view class="weui-cell__hd" style="position: absolute;right: 10px;bottom:18rpx;">
+              <image src="/icon/examine.png" style="width: 70px; height: 70px; display: block;" />
+            </view>
+          </view>
+        </van-card>
+        <van-divider />
+      </view>
+    </view>
+    <block wx:if="{{examineGoods.length == 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </block>
+  </van-tab>
+
+  <van-tab title="未通过">
+    <block wx:if="{{noPassGoods.length != 0}}">
+      <van-divider />
+    </block>
+    <view wx:for="{{noPassGoods}}" wx:key="key">
+      <view>
+        <van-card centered="true" origin-price="{{item.oldPrice}}" price="{{item.currentPrice}}" title="{{item.name}}" thumb="{{item.imageUrl}}" lazy-load="true">
+          <view slot="tags">
+            <van-tag type="primary">{{item.sortName}}</van-tag>
+          </view>
+          <view slot="bottom">
+            <button class="cu-btn bg-red" style="margin-right:15rpx" bindtap="delete" id="{{item.id}}">删除商品</button>
+            <view class="weui-cell__hd" style="position: absolute;right: 10px;bottom:18rpx;">
+              <image src="/icon/nopass.png" style="width: 70px; height: 70px; display: block;border-radius:50%;" />
+            </view>
+          </view>
+        </van-card>
+        <van-divider />
+      </view>
+    </view>
+    <block wx:if="{{noPassGoods.length == 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </block>
+  </van-tab>
+  <van-tab title="下架商品">
+    <block wx:if="{{unPushGoods.length != 0}}">
+      <van-divider />
+    </block>
+    <view wx:for="{{unPushGoods}}" wx:key="key">
+      <view>
+        <van-card centered="true" origin-price="{{item.oldPrice}}" price="{{item.currentPrice}}" title="{{item.name}}" thumb="{{item.imageUrl}}" lazy-load="true">
+          <view slot="tags">
+            <van-tag type="primary">{{item.sortName}}</van-tag>
+          </view>
+          <view slot="bottom">
+            <button class="cu-btn bg-green" style="margin-right:15rpx" bindtap="info" id="{{item.id}}">商品详情</button>
+            <view class="weui-cell__hd" style="position: absolute;right: 10px;bottom:18rpx;">
+              <image src="/icon/under.png" style="width: 70px; height: 70px; display: block;border-radius:50%;" />
+            </view>
+          </view>
+        </van-card>
+        <van-divider />
+      </view>
+    </view>
+    <block wx:if="{{unPushGoods.length == 0}}">
+      <view class="weui-loadmore weui-loadmore_line">
+        <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+      </view>
+    </block>
+  </van-tab>
+</van-tabs>

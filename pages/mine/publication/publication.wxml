@@ -1,0 +1,54 @@
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">商品名称</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请填写商品名称" bindinput="name" maxlength="10" />
+    </view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__hd">
+      <view class="weui-label">所属分类</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker range="{{array}}" range-key="{{'name'}}" bindchange="bindSortChange">
+        <input class="weui-input" placeholder="请选择您的商品类别" disabled value="{{array[index].name}}" />
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">商品原价</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="number" placeholder="请填写商品原价" maxlength="5" bindinput="oldPrice" />
+    </view>
+  </view>
+  <view class="weui-cell ">
+    <view class="weui-cell__hd">
+      <view class="weui-label">商品价格</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" type="number" placeholder="请填写商品价格" maxlength="4" bindinput="price" />
+    </view>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入商品详情描述" maxlength="100" bindinput="description" style="height: 6em;position:relative;">
+        <block wx:if="{{file!=null}}">
+          <view class="weui-uploader__file" bindtap="previewImage" id="{{3}}" style="margin-top:350rpx;">
+            <image class="weui-uploader__img" src="{{file}}" mode="aspectFill" />
+          </view>
+        </block>
+        <view class="weui-uploader__input-box" style="margin-top:350rpx;">
+          <view class="weui-uploader__input" bindtap="chooseImage" style=""></view>
+        </view>
+        <view class="weui-textarea-counter" style="position:absolute;bottom:-340rpx;right:15rpx;">{{length}}/100</view>
+      </textarea>
+    </view>
+  </view>
+</view>
+<button class="submit" bindtap="submit" style="margin-top:25rpx;">发布</button>

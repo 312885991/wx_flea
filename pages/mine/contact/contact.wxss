@@ -1,0 +1,7 @@
+/* pages/mine/contact/contact.wxss */
+.weui-cell__bd{
+  padding-left: 30rpx;
+}
+.nickName{
+  padding-bottom: 10rpx;
+}

@@ -1,0 +1,4 @@
+/* pages/mine/publication/publication.wxss */
+.submit{
+  background-color: #00B26A
+}

@@ -1,0 +1,45 @@
+<!--pages/mine/myComment/myComment.wxml-->
+<van-tabs bind:click="onClick" sticky animated>
+  <van-tab title="我评论的">
+    <block wx:for="{{myComment}}" wx:key="key">
+      <view class="cu-card dynamic {{isCard?'no-card':''}}" style="margin-bottom:-26rpx;" bindtap="detail" id="{{item.goodId}}">
+        <view class="cu-item shadow">
+          <view class="cu-list menu-avatar">
+            <view class="cu-item">
+              <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});"></view>
+              <view class="content flex-sub">
+                <view>{{item.nickName}}</view>
+                <view class="text-gray text-sm flex justify-between" style="width:97%;padding-top:4rpx;"> {{item.date}}<text style="">详情</text> </view>
+              </view>
+            </view>
+          </view>
+          <view class="text-content">
+            {{item.comment}}
+          </view>
+        </view>
+      </view>
+    </block>
+  </van-tab>
+  <view class="right">
+    <van-tab title="评论我的">
+      <block wx:for="{{commentMe}}" wx:key="key">
+        <view class="cu-card dynamic {{isCard?'no-card':''}}" style="margin-bottom:-26rpx;" bindtap="detail" id="{{item.goodId}}">
+          <view class="cu-item shadow">
+            <view class="cu-list menu-avatar">
+              <view class="cu-item">
+                <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});"></view>
+                <view class="content flex-sub">
+                  <view>{{item.nickName}}</view>
+                  <view class="text-gray text-sm flex justify-between" style="width:97%;padding-top:4rpx;"> {{item.date}}<text>详情</text> </view>
+                </view>
+              </view>
+            </view>
+            <view class="text-content">
+              {{item.comment}}
+            </view>
+          </view>
+        </view>
+      </block>
+    </van-tab>
+  </view>
+</van-tabs>

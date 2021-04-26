@@ -1,0 +1,7 @@
+@import 'style/vant.wxss';
+@import 'style/weui.wxss';
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+page{
+  background-color: #F6F6F6;
+}

@@ -1,0 +1,4 @@
+<!--pages/main/announceList/announceList.wxml-->
+<block wx:for="{{announceList}}" wx:key="key">
+  <van-cell center title="{{item.title}}" value=">" label="{{item.date}}" bind:click="info" id="{{item.id}}" />
+</block>

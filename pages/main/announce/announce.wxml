@@ -1,0 +1,13 @@
+<!--pages/main/announce/announce.wxml-->
+<view class="title">
+  <text>{{announce.title}}</text>
+</view>
+<view class="date">
+  <text>{{announce.date}}</text>
+</view>
+<view class="content">
+  <text>{{announce.text}}</text>
+</view>
+<view class="footer">
+  <text>{{announce.publisher}}</text>
+</view>

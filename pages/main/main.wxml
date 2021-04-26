@@ -1,0 +1,23 @@
+<!--pages/main/main.wxml-->
+<van-notice-bar left-icon="/icon/message.png" text="校园闲置平台小程序正式上线啦！" />
+<swiper indicator-dots="{{imgUrls.length===1?false:true}}" autoplay="true" interval="3000" duration="true" class="swipper">
+  <block wx:for="{{imgUrls}}" wx:key="key">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" lazy-load="true" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="container">
+  <view class="title">
+    <text class="cuIcon-notification lg text-gray"></text>
+    <text style="margin-left:10rpx;font-size:15px;color:#00B26A;">公告</text>
+  </view>
+  <view class="content" bindtap="more">
+    <block wx:for="{{announceList}}" wx:key="key">
+      <view class="list">
+        {{index+1}}. <text>{{item.title}}</text>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </block>
+  </view>
+</view>

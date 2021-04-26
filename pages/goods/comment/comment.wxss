@@ -1,0 +1,4 @@
+/* pages/goods/comment/comment.wxss */
+.submit{
+  background-color:#00B26A
+}
